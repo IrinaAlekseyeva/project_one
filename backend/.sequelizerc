@@ -1,0 +1,13 @@
+// You will set up Sequelize to look in the `backend/config/database.js` file for
+// its database configurations. You will also set up the `backend/db` folder to
+// contain all the files for models, seeders, and migrations.
+
+// backend/.sequelizerc
+const path = require('path');
+
+module.exports = {
+  config: path.resolve('config', 'database.js'),
+  'models-path': path.resolve('db', 'models'),
+  'seeders-path': path.resolve('db', 'seeders'),
+  'migrations-path': path.resolve('db', 'migrations')
+};
