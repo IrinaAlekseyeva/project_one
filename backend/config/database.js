@@ -7,14 +7,14 @@ const config = require('./index');
 module.exports = {
   development: {
     storage: config.dbFile,
-    dialect: "sqlite",
+    dialect: "sqlite",   // locally we are using sqlite
     seederStorage: "sequelize",
     logQueryParameters: true,
     typeValidation: true
   },
   production: {
     use_env_variable: 'DATABASE_URL',
-    dialect: 'postgres',
+    dialect: 'postgres',  // for production we are using posgres
     seederStorage: 'sequelize',
     dialectOptions: {
       ssl: {

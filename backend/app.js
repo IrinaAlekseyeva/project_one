@@ -69,7 +69,7 @@ if (!isProduction) {
     next(err);
   });
 
-  app.use((err, _req, _res, next) => {
+  app.use((err, _req, _res, next) => { 
     // check if error is a Sequelize error:
     if (err instanceof ValidationError) {
       let errors = {};
