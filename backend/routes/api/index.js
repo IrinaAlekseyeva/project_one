@@ -15,9 +15,9 @@ const { restoreUser } = require("../../utils/auth.js");
 
   router.use(restoreUser);
 
-  router.use('/session', sessionRouter);
+  router.use('/session', sessionRouter); // this router is set for log in
   
-  router.use('/users', usersRouter);
+  router.use('/users', usersRouter);     // this router is set for sign up, creating a new user
   
   router.post('/test', (req, res) => {
     res.json({ requestBody: req.body });

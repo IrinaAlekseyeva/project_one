@@ -11,8 +11,8 @@ const db = require('../db/models');
 
 // Check the database connection before starting the app
 db.sequelize
-  .authenticate()
-  .then(() => {
+  .authenticate() // authenticate that we can connect to this database
+  .then(() => { // if we can to connect to db, start our server
     console.log('Database connection success! Sequelize is ready to use...');
 
     // Start listening for connections
