@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   review.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     reviewId: DataTypes.INTEGER,
     revewText: DataTypes.STRING,
     stars: DataTypes.INTEGER,
