@@ -27,6 +27,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       foreignKey: true
     },
+      primaryKey: true
+    },
+    ownerId: DataTypes.INTEGER,
     address: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
