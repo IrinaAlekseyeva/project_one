@@ -6,12 +6,24 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       // define association here
+      User.hasMany(models.Spot, {
+        foreignKey: "ownerid",
+        onDelete: "CASCADE"
+      });
+
     }
   }
 
   User.init(
     {
       id: {
+        autoIncrement: true,
+        primaryKey: true,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        unique: true
+      },
+      firstName: DataTypes.STRING,
         type: DataTypes.INTEGER,
         primaryKey: true
       },
