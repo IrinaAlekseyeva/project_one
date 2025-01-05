@@ -58,7 +58,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    }, options.tableName = "Spot");
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Spots');
