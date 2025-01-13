@@ -68,6 +68,6 @@ module.exports = {
     }, options.tableName = "Spot");
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Spot');
+    return queryInterface.dropTable(options);
   }
 };

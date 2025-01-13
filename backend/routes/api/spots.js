@@ -30,7 +30,7 @@ router.get('/current', async (req, res) => {
   res.json(userSpots);
 });
 
-// to delete a spot
+//to delete a spot belonging to a specific user
 router.delete(
   "/:spotId", async (req, res) => {
     const {user} = req;
@@ -73,6 +73,16 @@ router.post(
       });
     }
   );
+  
+  // to delete spot by its id
+  // router.delete(
+  //   "/:spotId", async (req, res) => {
+  //     const {spotId} = req.params;
+  //     const spotToDelete = await Spot.findByPk(spotId);
+  //     await spotToDelete.destroy();
+  //     return res.json({message: `Spot ${spotId} is deleted`});
+  //   }
+  // );
 
 
 

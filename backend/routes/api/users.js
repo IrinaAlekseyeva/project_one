@@ -60,6 +60,15 @@ router.post(
     }
   );
 
+  router.delete(
+    "/:userId", async (req, res) => {
+      const {userId} = req.params;
+      const userToDelete = await User.findByPk(userId);
+      await userToDelete.destroy();
+      return res.json({message: `User ${userToDelete.firstName} ${userToDelete.lastName}  deleted`}); 
+    }
+  );
+
 
 
 module.exports = router;
