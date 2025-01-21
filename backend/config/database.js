@@ -26,5 +26,6 @@ module.exports = {
     define: {
       schema: process.env.SCHEMA,    // Use the SCHEMA environment variable to specify the schema
     },
-  },
+    },
 };
+console.log('Using schema:', process.env.SCHEMA); // verifying used SCHEMA
