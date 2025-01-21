@@ -1,0 +1,29 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "//irina_db_user:5J953zSKHBwzhMeD3un1eeyskHqMZQ1D@dpg-ctfonmjgbbvc73dffn5g-a/irina_db",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Proj",
+            "database": "irina_db",
+            "username": "irina_db_user",
+            "password": "5J953zSKHBwzhMeD3un1eeyskHqMZQ1D"
+        },
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "dpg-ctfonmjgbbvc73dffn5g-a.oregon-postgres.render.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "proj",
+            "database": "irina_db",
+            "username": "irina_db_user",
+            "password": "5J953zSKHBwzhMeD3un1eeyskHqMZQ1D"
+        }
+    ]
+}
