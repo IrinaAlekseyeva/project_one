@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'reviewImages',
+    schema: 'airbnb_schema'
   });
   return reviewImages;
 };
