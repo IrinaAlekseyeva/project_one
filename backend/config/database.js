@@ -14,7 +14,7 @@ module.exports = {
   },
 
   production: {
-    use_env_variable: 'postpostgresql://irina_db_qch2_user:JUaqiTcNACjJY5QNeF9UiVCupaC7fOCS@dpg-cu7ikvij1k6c73flanrg-a/irina_db_qch2gresql://aleks_db_user:rVdTib1VeLbb4yuByW8vWBRJCgGd4Mup@dpg-cu2binjv2p9s738q9r00-a/aleks_db', // Use DATABASE_URL for connection string in production
+    use_env_variable: 'DATABASE_URL', // Use DATABASE_URL for connection string in production
     dialect: 'postgres',              // Use PostgreSQL in production
     seederStorage: 'sequelize',       // Store seed data in Sequelize
     dialectOptions: {
