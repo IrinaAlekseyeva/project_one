@@ -35,7 +35,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    }, options.tableName = "Booking");
+    }, options);
   },
   async down(queryInterface, Sequelize) {
     return queryInterface.dropTable(options);
