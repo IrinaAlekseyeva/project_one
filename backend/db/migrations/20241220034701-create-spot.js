@@ -65,9 +65,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    }, options.tableName = "Spot");
+    }, options);
   },
   async down(queryInterface, Sequelize) {
+    options.tableName = "Spot";
     return queryInterface.dropTable(options);
   }
 };

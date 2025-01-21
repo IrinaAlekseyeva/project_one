@@ -28,9 +28,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    }, options.tableName = "ReviewImage");
+    }, options);
   },
   async down(queryInterface, Sequelize) {
+    options.tableName = reviewImages;
     await queryInterface.dropTable('reviewImages');
   }
 };
